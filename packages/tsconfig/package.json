@@ -1,0 +1,23 @@
+{
+  "name": "@teleskop150750/tsconfig",
+  "version": "0.0.30",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Валентин Степанов <teleskop15075@gmail.com> (https://github.com/teleskop150750)",
+  "main": "tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  },
+  "devDependencies": {
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.5"
+  }
+}

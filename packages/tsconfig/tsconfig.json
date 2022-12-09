@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "importHelpers": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    // Required in Vite
+    "isolatedModules": true,
+    // For `<script setup>`
+    // See <https://devblogs.microsoft.com/typescript/announcing-typescript-4-5-beta/#preserve-value-imports>
+    "preserveValueImports": true,
+    // import type
+    "importsNotUsedAsValues": "error",
+    "lib": ["DOM", "ESNext"],
+    // За счёт добавления болерплейта в выходной код, позволяет импортировать CommonJS пакеты как ES6.
+    "esModuleInterop": true,
+    // Этот флаг переключается на предстоящее поведение среды выполнения ECMA. поля классов
+    "useDefineForClassFields": true,
+    "sourceMap": true,
+    // Создание файлов с JSX без изменений.jsx
+    "jsx": "preserve",
+    // --declaration - генерирует файлы декларации .d.ts из .ts файлов
+    "declaration": true,
+
+    "strict": true,
+    // --noUnusedLocals - активная опция заставляет компилятор выводить сообщения о неиспользуемых элементах кода
+    "noUnusedLocals": true,
+    // --noUnusedParameters - данная опция заставляет компилятор выводить ошибки, если в коде будут найдены функции, чьи параметры не используются (за исключением параметров идентификаторы которых начинаются с нижней черты, например, _prop).
+    "noUnusedParameters": true,
+    // --exactOptionalPropertyTypes - при активном флаге запрещается присваивать значение undefined необязательным полям объекта без явной принадлежности к типу undefined.
+    "exactOptionalPropertyTypes": true,
+    // функции будут обязаны возвращать значение явно
+    "noImplicitReturns": true,
+    // если блок кода case не имеет выхода из него (break или return), возникнет ошибка
+    "noFallthroughCasesInSwitch": true,
+    // --noUncheckedIndexedAccess - при активной текущей опции обращаться к динамическим членам объекта разрешается только после подтверждения их существования, а также совместно с такими механизмами как опциональный оператор !. или оператор опциональной последовательности ?. .
+    "noUncheckedIndexedAccess": true,
+    // --noImplicitOverride - активирует механизм предотвращающий объявление суперклассом членов уже объявленных в его потомках.
+    "noImplicitOverride": true,
+    // --noPropertyAccessFromIndexSignature - активирует поведение запрещающее обращение через точечную нотацию к динамическим членам объекта определяющего строковую индексную сигнатуру,
+    "noPropertyAccessFromIndexSignature": true,
+    // Опция запрещает неиспользуемые лэйблы
+    "allowUnusedLabels": false,
+    // при обнаружении неиспользуемого кода будет выводиться сообщение об ошибке
+    "allowUnreachableCode": true,
+    // компилятор не позволяет указывать в качестве значения типы Null и Undefined, если они не были указаны в аннотации
+    "strictNullChecks": true,
+
+    // --forceConsistentCasingInFileNames - запрещает несогласованные ссылки на один и тот же файл.
+    "forceConsistentCasingInFileNames": true,
+    "incremental": false,
+    // перестает проверять типы в файлах библиотеках с расширением .d.ts
+    "skipLibCheck": true,
+    // позволяет конкретизировать поведение модулей
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  }
+}
