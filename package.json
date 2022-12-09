@@ -1,5 +1,5 @@
 {
-  "name": "@teleskop150750/eslint-config-monorepo",
+  "name": "@teleskop150750/stylelint-config-monorepo",
   "version": "0.0.40",
   "private": true,
   "packageManager": "pnpm@7.1.0",
