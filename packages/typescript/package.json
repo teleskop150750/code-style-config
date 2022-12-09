@@ -1,0 +1,27 @@
+{
+  "name": "@teleskop150750/eslint-config-ts",
+  "version": "0.0.40",
+  "description": "",
+  "author": "Валентин Степанов <teleskop15075@gmail.com> (https://github.com/teleskop150750)",
+  "license": "MIT",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=4.4"
+  },
+  "dependencies": {
+    "@teleskop150750/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.46.0",
+    "eslint-import-resolver-typescript": "^3.5.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0"
+  }
+}
