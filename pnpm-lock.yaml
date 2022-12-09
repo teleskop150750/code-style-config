@@ -5,12 +5,14 @@ importers:
   .:
     specifiers:
       '@teleskop150750/eslint-config': '*'
+      '@teleskop150750/prettier-config': '*'
       bumpp: ^8.2.1
-      eslint: ^8.28.0
+      eslint: ^8.29.0
       rimraf: ^3.0.2
-      typescript: ^4.9.3
+      typescript: ^4.9.4
     devDependencies:
       '@teleskop150750/eslint-config': link:packages/all
+      '@teleskop150750/prettier-config': link:packages/prettier
       bumpp: 8.2.1
       eslint: 8.29.0
       rimraf: 3.0.2
