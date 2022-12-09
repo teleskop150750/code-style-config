@@ -12,8 +12,11 @@
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@teleskop150750/eslint-config": "*",
+    "@teleskop150750/eslint-config-basic": "*",
+    "@teleskop150750/eslint-config-ts": "*",
+    "@teleskop150750/eslint-config-vue": "*",
     "@teleskop150750/prettier-config": "*",
+    "@teleskop150750/stylelint-config-css": "*",
     "bumpp": "^8.2.1",
     "eslint": "^8.29.0",
     "rimraf": "^3.0.2",
