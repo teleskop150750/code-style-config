@@ -1,0 +1,21 @@
+{
+  "name": "@teleskop150750/prettier-config",
+  "version": "0.0.30",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Валентин Степанов <teleskop15075@gmail.com> (https://github.com/teleskop150750)",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "prettier": "^2.5.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}

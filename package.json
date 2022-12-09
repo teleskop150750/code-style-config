@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@teleskop150750/eslint-config": "*",
+    "@teleskop150750/prettier-config": "*",
     "bumpp": "^8.2.1",
     "eslint": "^8.28.0",
     "rimraf": "^3.0.2",
