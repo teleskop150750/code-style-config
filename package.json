@@ -6,7 +6,12 @@
   "author": "Валентин Степанов <teleskop15075@gmail.com> (https://github.com/teleskop150750)",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint .",
+    "prettier": "prettier --check --ignore-unknown \"**/*\"",
+    "prettier:fix": "prettier --write --ignore-unknown \"**/*\"",
+    "lint:js": "eslint \"**/*.{js,ts,jsx,tsx,cjs,cts,json,vue}\"",
+    "lint:js:fix": "eslint --fix \"**/*.{js,ts,jsx,tsx,cjs,cts,json,vue}\"",
+    "lint:style": "stylelint \"**/*.{css,vue}\"",
+    "lint:style:fix": "stylelint --fix \"**/*.{css,vue}\"",
     "test": "pnpm -r run test",
     "prepare": "pnpm -r run stub",
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"

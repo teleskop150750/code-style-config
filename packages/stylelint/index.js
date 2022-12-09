@@ -1,5 +1,7 @@
-const { propertyOrdering, selectorOrdering } = require('stylelint-semantic-groups');
+// eslint-disable-next-line unicorn/prefer-module
+const { propertyOrdering, selectorOrdering } = require('stylelint-semantic-groups')
 
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   plugins: ['stylelint-order', 'stylelint-color-format', 'stylelint-declaration-block-no-ignored-properties'],
   extends: ['stylelint-config-standard'],
@@ -25,5 +27,5 @@ module.exports = {
       },
     ],
   },
-};
+}
 

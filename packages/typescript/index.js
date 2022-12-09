@@ -1,5 +1,6 @@
-const fs = require('fs')
-const { join } = require('path')
+/* eslint-disable unicorn/prefer-module */
+const fs = require('node:fs')
+const { join } = require('node:path')
 const basic = require('@teleskop150750/eslint-config-basic')
 
 module.exports = {
@@ -13,11 +14,12 @@ module.exports = {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
     },
   },
+  // eslint-disable-next-line unicorn/prefer-spread
   overrides: basic.overrides.concat(
-    !fs.existsSync(join(process.cwd(), 'tsconfig.eslint.json'))
-      ? []
-      : [{
-        // @ts-ignore
+    fs.existsSync(join(process.cwd(), 'tsconfig.eslint.json'))
+      ? [{
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         parserOptions: {
           tsconfigRootDir: process.cwd(),
           project: ['tsconfig.eslint.json'],
@@ -36,7 +38,8 @@ module.exports = {
           '@typescript-eslint/no-floating-promises': 'error',
           '@typescript-eslint/no-misused-promises': 'error',
         },
-      }],
+      }]
+      : [],
   ),
   rules: {
     'import/named': 'off',
@@ -51,7 +54,7 @@ module.exports = {
 
     // Override JS
     'no-useless-constructor': 'off',
-    'indent': 'off',
+    indent: 'off',
     '@typescript-eslint/indent': ['off', 2, {
       SwitchCase: 1,
       VariableDeclarator: 1,
@@ -104,9 +107,9 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
-    'semi': 'off',
+    semi: 'off',
     '@typescript-eslint/semi': ['error', 'never'],
-    'quotes': 'off',
+    quotes: 'off',
     '@typescript-eslint/quotes': ['error', 'single'],
     'space-before-blocks': 'off',
     '@typescript-eslint/space-before-blocks': ['error', 'always'],

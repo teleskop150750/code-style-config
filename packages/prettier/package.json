@@ -2,13 +2,13 @@
   "name": "@teleskop150750/prettier-config",
   "version": "0.0.43",
   "description": "",
-  "keywords": [],
-  "license": "MIT",
   "author": "Валентин Степанов <teleskop15075@gmail.com> (https://github.com/teleskop150750)",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
   "files": [
     "index.js"
   ],
-  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },

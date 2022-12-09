@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   env: {
     es2022: true,
@@ -38,6 +39,7 @@ module.exports = {
   plugins: [
     'html',
     'no-only-tests',
+    'simple-import-sort',
   ],
   settings: {
     'import/resolver': {
@@ -648,7 +650,7 @@ module.exports = {
       'error',
       {
         restrictedNamedExports: [
-          // eslint-disable-next-line array-element-newline
+
           'default', // Use `export default` to provide a default export
           'then', // This will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
         ],
@@ -1356,5 +1358,7 @@ module.exports = {
     'unicorn/no-array-callback-reference': 'off',
 
     'n/no-callback-literal': 'off',
+
+    'eslint-comments/disable-enable-pair': 'off',
   },
 }

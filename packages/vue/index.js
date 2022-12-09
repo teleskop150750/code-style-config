@@ -1,9 +1,9 @@
+/* eslint-disable unicorn/prefer-module */
 const { isPackageExists } = require('local-pkg')
 
 const TS = isPackageExists('typescript')
 
-if (!TS)
-  console.warn('[@teleskop150750/eslint-config] TypeScript is not installed, fallback to JS only.')
+if (!TS) { console.warn('[@teleskop150750/eslint-config] TypeScript is not installed, fallback to JS only.') }
 
 module.exports = {
   overrides: [
