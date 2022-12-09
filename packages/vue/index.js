@@ -3,7 +3,9 @@ const { isPackageExists } = require('local-pkg')
 
 const TS = isPackageExists('typescript')
 
-if (!TS) { console.warn('[@teleskop150750/eslint-config] TypeScript is not installed, fallback to JS only.') }
+if (!TS) {
+  console.warn('[@teleskop150750/eslint-config] TypeScript is not installed, fallback to JS only.')
+}
 
 module.exports = {
   overrides: [
@@ -21,17 +23,13 @@ module.exports = {
       rules: {
         // 'no-unused-vars': 'off',
         // 'no-undef': 'off',
-        ...(TS
-          ? { '@typescript-eslint/no-unused-vars': 'off' }
-          : null),
+        ...(TS ? { '@typescript-eslint/no-unused-vars': 'off' } : null),
       },
     },
   ],
   extends: [
     'plugin:vue/vue3-recommended',
-    TS
-      ? '@teleskop150750/eslint-config-ts'
-      : '@teleskop150750/eslint-config-basic',
+    TS ? '@teleskop150750/eslint-config-ts' : '@teleskop150750/eslint-config-basic',
   ],
   rules: {
     'vue/max-attributes-per-line': 'off',
@@ -60,12 +58,19 @@ module.exports = {
     'vue/component-name-in-template-casing': ['error', 'PascalCase'],
     'vue/component-options-name-casing': ['error', 'PascalCase'],
     'vue/custom-event-name-casing': ['error', 'camelCase'],
-    'vue/define-macros-order': ['error', {
-      order: ['defineProps', 'defineEmits'],
-    }],
-    'vue/html-comment-content-spacing': ['error', 'always', {
-      exceptions: ['-'],
-    }],
+    'vue/define-macros-order': [
+      'error',
+      {
+        order: ['defineProps', 'defineEmits'],
+      },
+    ],
+    'vue/html-comment-content-spacing': [
+      'error',
+      'always',
+      {
+        exceptions: ['-'],
+      },
+    ],
     'vue/no-restricted-v-bind': ['error', '/^v-/'],
     'vue/no-useless-v-bind': 'error',
     'vue/no-v-text-v-html-on-component': 'error',
@@ -115,12 +120,7 @@ module.exports = {
     // Запретить литеральные числа, которые теряют точность
     'vue/no-loss-of-precision': 'error',
     // Запретить указанный синтаксис
-    'vue/no-restricted-syntax': [
-      'error',
-      'DebuggerStatement',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'vue/no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
     // Запретить разреженные массивы
     'vue/no-sparse-arrays': 'error',
     // Применять согласованные разрывы строк после открытия и перед закрытием фигурных скобок

@@ -4,7 +4,7 @@ const { propertyOrdering, selectorOrdering } = require('stylelint-semantic-group
 // eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   plugins: ['stylelint-order', 'stylelint-color-format', 'stylelint-declaration-block-no-ignored-properties'],
-  extends: ['stylelint-config-standard'],
+  extends: ['stylelint-config-standard', 'stylelint-config-html'],
   rules: {
     'color-format/format': {
       format: 'hsl',
@@ -28,4 +28,3 @@ module.exports = {
     ],
   },
 }
-

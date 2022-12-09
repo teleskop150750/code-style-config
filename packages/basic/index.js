@@ -36,11 +36,7 @@ module.exports = {
     '!.vitepress',
     '!.vscode',
   ],
-  plugins: [
-    'html',
-    'no-only-tests',
-    'simple-import-sort',
-  ],
+  plugins: ['html', 'no-only-tests', 'simple-import-sort'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.mjs'] },
@@ -129,11 +125,7 @@ module.exports = {
           },
           {
             pathPattern: '^exports.*$',
-            order: [
-              'types',
-              'require',
-              'import',
-            ],
+            order: ['types', 'require', 'import'],
           },
         ],
       },
@@ -650,7 +642,6 @@ module.exports = {
       'error',
       {
         restrictedNamedExports: [
-
           'default', // Use `export default` to provide a default export
           'then', // This will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
         ],

@@ -4,11 +4,7 @@ const { join } = require('node:path')
 const basic = require('@teleskop150750/eslint-config-basic')
 
 module.exports = {
-  extends: [
-    '@teleskop150750/eslint-config-basic',
-    'plugin:import/typescript',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['@teleskop150750/eslint-config-basic', 'plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
   settings: {
     'import/resolver': {
       node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] },
@@ -17,28 +13,30 @@ module.exports = {
   // eslint-disable-next-line unicorn/prefer-spread
   overrides: basic.overrides.concat(
     fs.existsSync(join(process.cwd(), 'tsconfig.eslint.json'))
-      ? [{
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-expect-error
-        parserOptions: {
-          tsconfigRootDir: process.cwd(),
-          project: ['tsconfig.eslint.json'],
-        },
-        parser: '@typescript-eslint/parser',
-        excludedFiles: ['**/*.md/*.*'],
-        files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
-        rules: {
-          'no-throw-literal': 'off',
-          '@typescript-eslint/no-throw-literal': 'error',
-          'no-implied-eval': 'off',
-          '@typescript-eslint/no-implied-eval': 'error',
-          'dot-notation': 'off',
-          '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
-          'no-void': ['error', { allowAsStatement: true }],
-          '@typescript-eslint/no-floating-promises': 'error',
-          '@typescript-eslint/no-misused-promises': 'error',
-        },
-      }]
+      ? [
+          {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
+            parserOptions: {
+              tsconfigRootDir: process.cwd(),
+              project: ['tsconfig.eslint.json'],
+            },
+            parser: '@typescript-eslint/parser',
+            excludedFiles: ['**/*.md/*.*'],
+            files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+            rules: {
+              'no-throw-literal': 'off',
+              '@typescript-eslint/no-throw-literal': 'error',
+              'no-implied-eval': 'off',
+              '@typescript-eslint/no-implied-eval': 'error',
+              'dot-notation': 'off',
+              '@typescript-eslint/dot-notation': ['error', { allowKeywords: true }],
+              'no-void': ['error', { allowAsStatement: true }],
+              '@typescript-eslint/no-floating-promises': 'error',
+              '@typescript-eslint/no-misused-promises': 'error',
+            },
+          },
+        ]
       : [],
   ),
   rules: {
@@ -55,44 +53,48 @@ module.exports = {
     // Override JS
     'no-useless-constructor': 'off',
     indent: 'off',
-    '@typescript-eslint/indent': ['off', 2, {
-      SwitchCase: 1,
-      VariableDeclarator: 1,
-      outerIIFEBody: 1,
-      MemberExpression: 1,
-      FunctionDeclaration: { parameters: 1, body: 1 },
-      FunctionExpression: { parameters: 1, body: 1 },
-      CallExpression: { arguments: 1 },
-      ArrayExpression: 1,
-      ObjectExpression: 1,
-      ImportDeclaration: 1,
-      flatTernaryExpressions: false,
-      ignoreComments: false,
-      ignoredNodes: [
-        'TemplateLiteral *',
-        'JSXElement',
-        'JSXElement > *',
-        'JSXAttribute',
-        'JSXIdentifier',
-        'JSXNamespacedName',
-        'JSXMemberExpression',
-        'JSXSpreadAttribute',
-        'JSXExpressionContainer',
-        'JSXOpeningElement',
-        'JSXClosingElement',
-        'JSXFragment',
-        'JSXOpeningFragment',
-        'JSXClosingFragment',
-        'JSXText',
-        'JSXEmptyExpression',
-        'JSXSpreadChild',
-        'TSTypeParameterInstantiation',
-        'FunctionExpression > .params[decorators.length > 0]',
-        'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
-        'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
-      ],
-      offsetTernaryExpressions: true,
-    }],
+    '@typescript-eslint/indent': [
+      'off',
+      2,
+      {
+        SwitchCase: 1,
+        VariableDeclarator: 1,
+        outerIIFEBody: 1,
+        MemberExpression: 1,
+        FunctionDeclaration: { parameters: 1, body: 1 },
+        FunctionExpression: { parameters: 1, body: 1 },
+        CallExpression: { arguments: 1 },
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+        ImportDeclaration: 1,
+        flatTernaryExpressions: false,
+        ignoreComments: false,
+        ignoredNodes: [
+          'TemplateLiteral *',
+          'JSXElement',
+          'JSXElement > *',
+          'JSXAttribute',
+          'JSXIdentifier',
+          'JSXNamespacedName',
+          'JSXMemberExpression',
+          'JSXSpreadAttribute',
+          'JSXExpressionContainer',
+          'JSXOpeningElement',
+          'JSXClosingElement',
+          'JSXFragment',
+          'JSXOpeningFragment',
+          'JSXClosingFragment',
+          'JSXText',
+          'JSXEmptyExpression',
+          'JSXSpreadChild',
+          'TSTypeParameterInstantiation',
+          'FunctionExpression > .params[decorators.length > 0]',
+          'FunctionExpression > .params > :matches(Decorator, :not(:first-child))',
+          'ClassBody.body > PropertyDefinition[decorators.length > 0] > .key',
+        ],
+        offsetTernaryExpressions: true,
+      },
+    ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     // нет-повторное объявление
