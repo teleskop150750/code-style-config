@@ -1,6 +1,6 @@
 {
   "name": "@teleskop150750/stylelint-config-monorepo",
-  "version": "0.0.40",
+  "version": "0.0.41",
   "private": true,
   "packageManager": "pnpm@7.1.0",
   "author": "Валентин Степанов <teleskop15075@gmail.com> (https://github.com/teleskop150750)",
