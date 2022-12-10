@@ -1332,6 +1332,7 @@ module.exports = {
     // 'import/export': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'import/no-unresolved': 'off',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
 
