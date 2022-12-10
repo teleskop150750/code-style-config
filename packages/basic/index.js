@@ -1347,6 +1347,7 @@ module.exports = {
     'unicorn/no-useless-undefined': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/no-array-callback-reference': 'off',
+    'unicorn/no-negated-condition': 'off',
 
     'n/no-callback-literal': 'off',
 
